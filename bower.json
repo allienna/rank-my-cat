@@ -1,0 +1,21 @@
+{
+  "name": "rank-my-cat",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Aurélien Allienne <aurelien.allienne@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/allienna/rank-my-cat",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}
