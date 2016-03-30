@@ -6,7 +6,10 @@ var mergeTrees = require('broccoli-merge-trees');
 
 module.exports = function (defaults) {
     var app = new Angular2App(defaults, {
-        vendorNpmFiles: []
+        vendorNpmFiles: [
+            'angularfire2/**/*.js',
+            'firebase/lib/**/*.js'
+        ]
     });
 
     var myTree = new Funnel('bower_components', {

@@ -1,21 +1,22 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {Observable} from 'rxjs/Observable';
+import {CatService} from "./service/cat.service";
+import {Cat} from "./model/cat.model";
 
 
 @Component({
-  selector: 'rank-my-cat-app',
-  providers: [ROUTER_PROVIDERS],
-  templateUrl: 'app/rank-my-cat.html',
-  directives: [ROUTER_DIRECTIVES],
-  pipes: []
+    selector: 'rank-my-cat-app',
+    providers: [ROUTER_PROVIDERS, CatService],
+    templateUrl: 'app/rank-my-cat.html',
+    directives: [ROUTER_DIRECTIVES],
+    pipes: []
 })
-@RouteConfig([
-
-])
+@RouteConfig([])
 export class RankMyCatApp {
-  defaultMeaning: number = 42;
+    cats: Observable<Cat[]>;
 
-  meaningOfLife(meaning?: number) {
-    return `The meaning of life is ${meaning || this.defaultMeaning}`;
-  }
+    constructor(private catService: CatService) {
+        this.cats = catService.getAll();
+    }
 }

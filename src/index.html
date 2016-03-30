@@ -25,102 +25,6 @@
     <a class="navbar-brand" href="#">Rake My Cat</a>
 </nav>
 
-<div class="container-fluid" style="margin-top:20px;">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">My Kitten</h4>
-                    <h6 class="card-title">Position: 3/99</h6>
-                </div>
-                <img src="http://placekitten.com/500/200" alt="Card image" style="width: 100%;">
-                <div class="card-block row">
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
-                </div>
-                <div class="card-footer text-muted text-xs-center">
-                    Last updated 3 mins ago
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">My Kitten</h4>
-                    <h6 class="card-title">Position: 3/99</h6>
-                </div>
-                <img src="http://placekitten.com/500/200" alt="Card image" style="width: 100%;">
-                <div class="card-block row">
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
-                </div>
-                <div class="card-footer text-muted text-xs-center">
-                    Last updated 3 mins ago
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">My Kitten</h4>
-                    <h6 class="card-title">Position: 3/99</h6>
-                </div>
-                <img src="http://placekitten.com/500/200" alt="Card image" style="width: 100%;">
-                <div class="card-block row">
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
-                </div>
-                <div class="card-footer text-muted text-xs-center">
-                    Last updated 3 mins ago
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">My Kitten</h4>
-                    <h6 class="card-title">Position: 3/99</h6>
-                </div>
-                <img src="http://placekitten.com/500/200" alt="Card image" style="width: 100%;">
-                <div class="card-block row">
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
-                </div>
-                <div class="card-footer text-muted text-xs-center">
-                    Last updated 3 mins ago
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">My Kitten</h4>
-                    <h6 class="card-title">Position: 5/99</h6>
-                </div>
-                <img src="http://placekitten.com/500/200" alt="Card image" style="width: 100%;">
-                <div class="card-block row">
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-                    <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
-                </div>
-                <div class="card-footer text-muted text-xs-center">
-                    Last updated 3 mins ago
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</div>
 
 <rank-my-cat-app>Loading...</rank-my-cat-app>
 </div>
@@ -140,10 +44,18 @@
 
 <script>
     System.config({
+        map: {
+            firebase: 'vendor/firebase/lib/firebase-web.js',
+            angularfire2: 'vendor/angularfire2'
+        },
         packages: {
             app: {
                 format: 'register',
                 defaultExtension: 'js'
+            },
+            angularfire2: {
+                defaultExtension: 'js',
+                main: 'angularfire2.js'
             }
         }
     });
