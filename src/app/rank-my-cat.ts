@@ -3,14 +3,14 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {Observable} from 'rxjs/Observable';
 import {CatService} from "./service/cat.service";
 import {Cat} from "./model/cat.model";
-
+import {TimeAgoPipe} from 'angular2-moment';
 
 @Component({
     selector: 'rank-my-cat-app',
     providers: [ROUTER_PROVIDERS, CatService],
     templateUrl: 'app/rank-my-cat.html',
     directives: [ROUTER_DIRECTIVES],
-    pipes: []
+    pipes: [TimeAgoPipe]
 })
 @RouteConfig([])
 export class RankMyCatApp implements OnInit {

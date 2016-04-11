@@ -46,7 +46,9 @@
     System.config({
         map: {
             firebase: 'vendor/firebase/lib/firebase-web.js',
-            angularfire2: 'vendor/angularfire2'
+            angularfire2: 'vendor/angularfire2',
+            'angular2-moment': 'vendor/angular2-moment',
+            moment: 'vendor/moment/'
         },
         packages: {
             app: {
@@ -56,6 +58,14 @@
             angularfire2: {
                 defaultExtension: 'js',
                 main: 'angularfire2.js'
+            },
+            'angular2-moment': {
+                defaultExtension: 'js',
+                main: 'index.js'
+            },
+            'moment': {
+                defaultExtension: 'js',
+                main: 'moment.js'
             }
         }
     });

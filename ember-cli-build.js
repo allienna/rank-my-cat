@@ -8,7 +8,9 @@ module.exports = function (defaults) {
     var app = new Angular2App(defaults, {
         vendorNpmFiles: [
             'angularfire2/**/*.js',
-            'firebase/lib/**/*.js'
+            'firebase/lib/**/*.js',
+            'angular2-moment/**/*.js',
+            'moment/**/*.js'
         ]
     });
 
