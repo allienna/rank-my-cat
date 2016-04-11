@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
 import {CatService} from "./service/cat.service";
@@ -13,10 +13,13 @@ import {Cat} from "./model/cat.model";
     pipes: []
 })
 @RouteConfig([])
-export class RankMyCatApp {
+export class RankMyCatApp implements OnInit {
     cats: Observable<Cat[]>;
 
     constructor(private catService: CatService) {
-        this.cats = catService.getAll();
+    }
+    
+    ngOnInit() {
+        this.cats = this.catService.getAll();
     }
 }
