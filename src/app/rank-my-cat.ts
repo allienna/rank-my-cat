@@ -21,6 +21,6 @@ export class RankMyCatApp implements OnInit {
     }
     
     ngOnInit() {
-        this.cats = this.catService.getAll();
+        this.cats = this.catService.get();
     }
 }

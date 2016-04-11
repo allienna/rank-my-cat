@@ -5,8 +5,12 @@
     </div>
     <img src="{{cat.url}}" alt="Card image" style="width: 100%;">
     <div class="card-block row">
-        <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-        <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
+        <button type="button" (click)="unvote($event)" 
+            [class.disabled]="voted == -1"
+            class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
+        <button type="button" (click)="vote($event)" 
+            [class.disabled]="voted == 1"
+            class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
     </div>
     <div class="card-footer text-muted text-xs-center">
         {{cat.lastUpdate | secondsToDate | amTimeAgo}}

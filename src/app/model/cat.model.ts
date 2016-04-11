@@ -6,7 +6,7 @@ export class Cat {
     constructor(
         public name: String,
         public url: String,
-        public score: Number,
-        public lastUpdate: Date
+        public score: number,
+        public lastUpdate: number
     ){}
 }
