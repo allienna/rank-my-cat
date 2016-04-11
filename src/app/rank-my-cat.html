@@ -1,18 +1,7 @@
 <div class="container-fluid" style="padding-top: 20px;">
     <div class="card-columns">
-        <div class="card" *ngFor="#cat of cats | async">
-            <div class="card-block">
-                <h4 class="card-title">{{cat.name}}</h4>
-                <h6 class="card-title">Score: {{cat.score}}</h6>
-            </div>
-            <img src="{{cat.url}}" alt="Card image" style="width: 100%;">
-            <div class="card-block row">
-                <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">dislike</button>
-                <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
-            </div>
-            <div class="card-footer text-muted text-xs-center">
-                {{cat.lastUpdate | secondsToDate | amTimeAgo}}
-            </div>
+        <div *ngFor="#cat of cats | async">
+            <cat-card [cat]='cat'></cat-card>
         </div>
     </div>
 </div>

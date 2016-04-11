@@ -1,18 +1,17 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
-import {CatService} from "./service/cat.service";
-import {Cat} from "./model/cat.model";
-import {TimeAgoPipe} from 'angular2-moment';
 
-import {SecondsToPipe} from './pipe/secondsToDate.pipe';
+import {CatCard} from './cat-card.component';
+import {CatService} from './service/cat.service';
+import {Cat} from './model/cat.model';
+
 
 @Component({
     selector: 'rank-my-cat-app',
     providers: [ROUTER_PROVIDERS, CatService],
     templateUrl: 'app/rank-my-cat.html',
-    directives: [ROUTER_DIRECTIVES],
-    pipes: [TimeAgoPipe, SecondsToPipe]
+    directives: [ROUTER_DIRECTIVES, CatCard]
 })
 @RouteConfig([])
 export class RankMyCatApp implements OnInit {
