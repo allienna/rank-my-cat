@@ -5,12 +5,14 @@ import {CatService} from "./service/cat.service";
 import {Cat} from "./model/cat.model";
 import {TimeAgoPipe} from 'angular2-moment';
 
+import {SecondsToPipe} from './pipe/secondsToDate.pipe';
+
 @Component({
     selector: 'rank-my-cat-app',
     providers: [ROUTER_PROVIDERS, CatService],
     templateUrl: 'app/rank-my-cat.html',
     directives: [ROUTER_DIRECTIVES],
-    pipes: [TimeAgoPipe]
+    pipes: [TimeAgoPipe, SecondsToPipe]
 })
 @RouteConfig([])
 export class RankMyCatApp implements OnInit {

@@ -11,7 +11,7 @@
                 <button type="button" class="btn btn-primary btn-sm col-sm-3 col-sm-offset-2">like</button>
             </div>
             <div class="card-footer text-muted text-xs-center">
-                {{cat.lastUpdate | amTimeAgo}}
+                {{cat.lastUpdate | secondsToDate | amTimeAgo}}
             </div>
         </div>
     </div>
