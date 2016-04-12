@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {Observable} from 'rxjs/Observable';
 
 import {CatCard} from './cat-card.component';
+import {NavbarComponent} from './navbar.component';
 import {CatService} from './service/cat.service';
 import {Cat} from './model/cat.model';
 
@@ -11,7 +12,7 @@ import {Cat} from './model/cat.model';
     selector: 'rank-my-cat-app',
     providers: [ROUTER_PROVIDERS, CatService],
     templateUrl: 'app/rank-my-cat.html',
-    directives: [ROUTER_DIRECTIVES, CatCard]
+    directives: [ROUTER_DIRECTIVES, CatCard, NavbarComponent]
 })
 @RouteConfig([])
 export class RankMyCatApp implements OnInit {
