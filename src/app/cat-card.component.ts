@@ -23,6 +23,7 @@ export class CatCard {
             return;
         }
         this.voted--;
+        this.cat.score--;
         this._catService.update(this.cat);
     }
 
@@ -31,6 +32,7 @@ export class CatCard {
             return;
         }
         this.voted++;
+        this.cat.score++;
         this._catService.update(this.cat);
     }
 }

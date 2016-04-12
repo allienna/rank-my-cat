@@ -1,6 +1,3 @@
-/**
- * Created by aurelienallienne on 30/03/2016.
- */
 import {Injectable} from 'angular2/core';
 import {AngularFire} from 'angularfire2';
 
@@ -20,7 +17,9 @@ export class CatService {
     update(cat: Cat) {
         // TODO
         // return this.db.save(cat);
+        cat.lastUpdate = new Date().getTime();
         console.log('Update not yet implemented by angularfire2');
+        console.log(cat);
     }
     
     add(cat: Cat) {
