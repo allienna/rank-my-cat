@@ -1,5 +1,7 @@
 import {Component} from 'angular2/core';
-import {FormBuilder, ControlGroup} from 'angular2/common';
+import {FormBuilder, ControlGroup, Validators} from 'angular2/common';
+
+import {StaticValidators} from './validator/staticValidators';
 
 @Component({
     selector: 'add-cat-form',
@@ -10,8 +12,13 @@ export class AddCatComponent {
     
     constructor(fb: FormBuilder) {
         this.form = fb.group({
-            name: [],
-            url: []
+            name: ['', Validators.required],
+            url: ['', 
+                Validators.compose([
+                    Validators.required,
+                    StaticValidators.url
+                ])
+            ]
         })
     }
 }

@@ -3,12 +3,22 @@
     <fieldset class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" 
-            ngControl="name" id="name" placeholder="Name">
+            #name="ngForm" ngControl="name" placeholder="Name">
+        <div *ngIf="name.touched && !name.valid" class="label label-danger">
+            Name is required
+        </div>
     </fieldset>
     <fieldset class="form-group">
-        <label for="url">Password</label>
+        <label for="url">Password 
+            </label>
         <input type="text" class="form-control"
-            ngControl="url" id="url" placeholder="Url">
+            #url="ngForm" ngControl="url" placeholder="Url">
+        <div *ngIf="url.touched && url.errors">
+            <div *ngIf="url.errors.required" 
+                class="label label-danger">Url is required</div>
+            <div *ngIf="!url.errors.required && url.errors.invalidUrl" 
+                class="label label-danger">Url is invalid</div>
+        </div>
     </fieldset>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Add</button>
 </form>
