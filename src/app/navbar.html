@@ -1,12 +1,14 @@
 <nav class="navbar navbar-full navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Rake My Cat</a>
+    <a class="navbar-brand" [routerLink]="['Cats']">Rake My Cat</a>
 
     <ul class="nav navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Cats</a>
+        <li class="nav-item"
+            [class.active]="isCurrentRoute(['Cats'])">
+            <a class="nav-link" [routerLink]="['Cats']">Cats</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Add</a>
+        <li class="nav-item"
+            [class.active]="isCurrentRoute(['Add'])">
+            <a class="nav-link" [routerLink]="['Add']">Add</a>
         </li>
     </ul>
 </nav>
