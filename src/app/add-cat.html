@@ -1,0 +1,14 @@
+<h3>Add a cat</h3>
+<form [ngFormModel]="form">
+    <fieldset class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" 
+            ngControl="name" id="name" placeholder="Name">
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="url">Password</label>
+        <input type="text" class="form-control"
+            ngControl="url" id="url" placeholder="Url">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
